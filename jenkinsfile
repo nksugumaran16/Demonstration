@@ -1,0 +1,14 @@
+pipeline{
+	agent {
+	    label 'test-sh'
+	}
+	stages{
+	stage('Build demonstation project'){
+		steps{
+			sh """
+				mvn clean install
+			"""
+                    }
+         }
+   }
+}
